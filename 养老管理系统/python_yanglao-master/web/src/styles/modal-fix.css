@@ -1,0 +1,559 @@
+/* 修复模态框显示问题 */
+
+/* 确保模态框正确居中显示 */
+.ant-modal {
+  top: 20px !important;
+  margin: 0 auto !important;
+  padding-bottom: 0 !important;
+  max-height: calc(100vh - 40px) !important;
+}
+
+/* 确保模态框在视口中央 */
+.ant-modal.ant-modal-centered {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+/* 确保模态框内容区域正确显示 */
+.ant-modal-content {
+  position: relative !important;
+  background: #fff !important;
+  border-radius: 6px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 确保模态框头部正确显示 */
+.ant-modal-header {
+  padding: 16px 24px !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+  border-radius: 6px 6px 0 0 !important;
+}
+
+/* 确保模态框主体正确显示 */
+.ant-modal-body {
+  padding: 24px !important;
+  font-size: 14px !important;
+  line-height: 1.5715 !important;
+  word-wrap: break-word !important;
+  max-height: calc(100vh - 200px) !important;
+  overflow-y: auto !important;
+}
+
+/* 确保模态框底部正确显示 */
+.ant-modal-footer {
+  padding: 10px 16px !important;
+  text-align: right !important;
+  background: transparent !important;
+  border-top: 1px solid #f0f0f0 !important;
+  border-radius: 0 0 6px 6px !important;
+}
+
+/* 确保模态框按钮正确显示 */
+.ant-modal-footer .ant-btn {
+  margin-left: 8px !important;
+}
+
+/* 确保模态框遮罩层正确显示 */
+.ant-modal-mask {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  z-index: 1000 !important;
+  height: 100% !important;
+  background-color: rgba(0, 0, 0, 0.45) !important;
+}
+
+/* 确保模态框包装器正确显示 */
+.ant-modal-wrap {
+  position: fixed !important;
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  overflow: auto !important;
+  outline: 0 !important;
+  z-index: 1000 !important;
+}
+
+/* 修复表单在模态框中的显示 */
+.ant-modal .ant-form {
+  margin: 0 !important;
+}
+
+.ant-modal .ant-form-item {
+  margin-bottom: 16px !important;
+}
+
+.ant-modal .ant-form-item-label {
+  padding: 0 0 8px !important;
+}
+
+/* 修复输入框在模态框中的显示 */
+.ant-modal .ant-input,
+.ant-modal .ant-select,
+.ant-modal .ant-textarea {
+  width: 100% !important;
+}
+
+/* 修复按钮在模态框中的显示 */
+.ant-modal .ant-btn {
+  height: 32px !important;
+  padding: 4px 15px !important;
+  font-size: 14px !important;
+  border-radius: 6px !important;
+}
+
+/* 确保模态框在不同屏幕尺寸下正确显示 */
+@media (max-width: 768px) {
+  .ant-modal {
+    top: 0 !important;
+    transform: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  .ant-modal-content {
+    height: 100% !important;
+    border-radius: 0 !important;
+  }
+}
+
+/* 修复特定模态框类的样式 */
+.user-modal,
+.health-modal,
+.activity-modal {
+  .ant-modal-content {
+    min-height: 400px !important;
+  }
+  
+  .ant-modal-body {
+    max-height: 60vh !important;
+    overflow-y: auto !important;
+  }
+}
+
+/* 确保z-index层级正确 */
+.ant-modal-root {
+  z-index: 1000 !important;
+}
+
+/* 修复可能的定位问题 */
+body.ant-scrolling-effect {
+  overflow: hidden !important;
+}
+
+/* 确保模态框在所有情况下都可见 */
+.ant-modal-centered {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ant-modal-centered .ant-modal {
+  top: 0 !important;
+  transform: none !important;
+}
+
+/* 修复下拉选择框样式问题 */
+.ant-select {
+  width: 100% !important;
+}
+
+.ant-select-selector {
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+}
+
+.ant-select-selector:hover {
+  border-color: #40a9ff !important;
+}
+
+.ant-select-focused .ant-select-selector {
+  border-color: #40a9ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+}
+
+/* 修复下拉选择框选项样式 */
+.ant-select-dropdown {
+  background: #fff !important;
+  border-radius: 6px !important;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05) !important;
+  z-index: 1050 !important;
+}
+
+.ant-select-item {
+  padding: 8px 12px !important;
+  color: #262626 !important;
+  background: #fff !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+.ant-select-item:last-child {
+  border-bottom: none !important;
+}
+
+.ant-select-item:hover {
+  background: #f5f5f5 !important;
+  color: #262626 !important;
+}
+
+.ant-select-item-option-selected {
+  background: #e6f7ff !important;
+  color: #1890ff !important;
+  font-weight: 500 !important;
+}
+
+.ant-select-item-option-active {
+  background: #f5f5f5 !important;
+}
+
+/* 修复下拉选择框占位符样式 */
+.ant-select-selection-placeholder {
+  color: #bfbfbf !important;
+  font-style: normal !important;
+}
+
+/* 修复下拉选择框清除按钮 */
+.ant-select-clear {
+  background: rgba(0, 0, 0, 0.25) !important;
+  color: #fff !important;
+  font-size: 12px !important;
+  border-radius: 50% !important;
+}
+
+.ant-select-clear:hover {
+  background: rgba(0, 0, 0, 0.45) !important;
+}
+
+/* 修复下拉选择框箭头 */
+.ant-select-arrow {
+  color: #bfbfbf !important;
+}
+
+.ant-select-open .ant-select-arrow {
+  color: #1890ff !important;
+}
+
+/* 确保下拉选择框在模态框中正确显示 */
+.ant-modal .ant-select {
+  z-index: auto !important;
+}
+
+.ant-modal .ant-select-dropdown {
+  z-index: 1060 !important;
+}
+
+/* 修复日期选择器样式 */
+.ant-picker {
+  width: 100% !important;
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 6px !important;
+  background: #fff !important;
+}
+
+.ant-picker:hover {
+  border-color: #40a9ff !important;
+}
+
+.ant-picker-focused {
+  border-color: #40a9ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+}
+
+/* 修复日期选择器输入框 */
+.ant-picker-input {
+  background: #fff !important;
+  color: #262626 !important;
+}
+
+.ant-picker-input > input {
+  background: #fff !important;
+  color: #262626 !important;
+}
+
+/* 确保日期选择器弹出层正确显示 */
+.ant-picker-dropdown {
+  z-index: 1060 !important;
+  background: #fff !important;
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 6px !important;
+  box-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05) !important;
+  max-width: 350px !important;
+  font-size: 14px !important;
+}
+
+/* 修复时间选择器 */
+.ant-picker-time-panel {
+  z-index: 1070 !important;
+  background: #fff !important;
+  border: 1px solid #d9d9d9 !important;
+}
+
+/* 修复日期选择器面板 */
+.ant-picker-panel {
+  background: #fff !important;
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 6px !important;
+}
+
+/* 修复日期选择器头部 */
+.ant-picker-header {
+  background: #fff !important;
+  border-bottom: 1px solid #f0f0f0 !important;
+}
+
+/* 修复日期选择器内容 */
+.ant-picker-content {
+  background: #fff !important;
+}
+
+/* 修复日期选择器单元格 */
+.ant-picker-cell {
+  background: #fff !important;
+  color: #262626 !important;
+}
+
+.ant-picker-cell:hover {
+  background: #f5f5f5 !important;
+}
+
+.ant-picker-cell-selected {
+  background: #1890ff !important;
+  color: #fff !important;
+}
+
+/* 修复时间选择器列 */
+.ant-picker-time-panel-column {
+  background: #fff !important;
+}
+
+.ant-picker-time-panel-cell {
+  background: #fff !important;
+  color: #262626 !important;
+}
+
+.ant-picker-time-panel-cell:hover {
+  background: #f5f5f5 !important;
+}
+
+.ant-picker-time-panel-cell-selected {
+  background: #1890ff !important;
+  color: #fff !important;
+}
+
+/* 修复日期选择器按钮 */
+.ant-picker-header-view button {
+  background: transparent !important;
+  color: #262626 !important;
+  border: none !important;
+}
+
+.ant-picker-header-view button:hover {
+  background: #f5f5f5 !important;
+  color: #1890ff !important;
+}
+
+/* 修复今天按钮 */
+.ant-picker-today-btn {
+  background: transparent !important;
+  color: #1890ff !important;
+  border: 1px solid #1890ff !important;
+  border-radius: 4px !important;
+  padding: 4px 12px !important;
+  font-size: 12px !important;
+}
+
+.ant-picker-today-btn:hover {
+  background: #1890ff !important;
+  color: #fff !important;
+}
+
+/* 修复日期选择器底部按钮区域 */
+.ant-picker-footer {
+  background: #fff !important;
+  border-top: 1px solid #f0f0f0 !important;
+  padding: 8px 12px !important;
+  text-align: center !important;
+}
+
+/* 修复确认按钮 */
+.ant-picker-ok {
+  background: #1890ff !important;
+  color: #fff !important;
+  border: 1px solid #1890ff !important;
+  border-radius: 4px !important;
+  padding: 4px 15px !important;
+  font-size: 12px !important;
+  margin-left: 8px !important;
+}
+
+.ant-picker-ok:hover {
+  background: #40a9ff !important;
+  border-color: #40a9ff !important;
+}
+
+/* 修复时间选择器确认按钮 */
+.ant-picker-time-panel .ant-picker-ok {
+  background: #1890ff !important;
+  color: #fff !important;
+  border: 1px solid #1890ff !important;
+}
+
+/* 强制显示确认按钮 - 更强的样式覆盖 */
+.ant-picker-datetime-panel .ant-picker-footer,
+.ant-picker-panel .ant-picker-footer,
+.ant-picker-dropdown .ant-picker-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  border-top: 1px solid #f0f0f0 !important;
+  padding: 8px 12px !important;
+  background: #fff !important;
+}
+
+.ant-picker-datetime-panel .ant-picker-footer .ant-picker-ok,
+.ant-picker-panel .ant-picker-footer .ant-picker-ok,
+.ant-picker-dropdown .ant-picker-footer .ant-picker-ok,
+.ant-picker-footer .ant-picker-ok {
+  display: inline-block !important;
+  background: #1890ff !important;
+  color: #fff !important;
+  border: 1px solid #1890ff !important;
+  border-radius: 4px !important;
+  padding: 4px 15px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  line-height: 1.5715 !important;
+  height: 32px !important;
+  min-width: 60px !important;
+}
+
+/* 修复时间选择器的确认按钮 */
+.ant-picker[picker="time"] .ant-picker-footer {
+  display: block !important;
+}
+
+.ant-picker[picker="time"] .ant-picker-footer .ant-picker-ok {
+  display: inline-block !important;
+  background: #1890ff !important;
+  color: #fff !important;
+  border: 1px solid #1890ff !important;
+  border-radius: 4px !important;
+  padding: 4px 15px !important;
+  cursor: pointer !important;
+}
+
+/* 确保所有时间选择器都有确认按钮 - 最强覆盖 */
+.ant-picker-dropdown .ant-picker-footer,
+.ant-picker[picker="time"] .ant-picker-footer,
+.ant-picker-time-panel .ant-picker-footer {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  padding: 8px 12px !important;
+  border-top: 1px solid #f0f0f0 !important;
+  background: #fff !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.ant-picker-dropdown .ant-picker-footer .ant-picker-ok,
+.ant-picker[picker="time"] .ant-picker-footer .ant-picker-ok,
+.ant-picker-time-panel .ant-picker-footer .ant-picker-ok,
+.ant-picker-ok {
+  display: inline-block !important;
+  background: #1890ff !important;
+  color: #fff !important;
+  border: 1px solid #1890ff !important;
+  border-radius: 4px !important;
+  padding: 4px 15px !important;
+  cursor: pointer !important;
+  margin-left: 8px !important;
+  font-size: 14px !important;
+  line-height: 1.5715 !important;
+  height: 32px !important;
+  min-width: 60px !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  z-index: 9999 !important;
+}
+
+/* 强制显示确认按钮的文本 */
+.ant-picker-ok::before {
+  content: "确定" !important;
+}
+
+/* 确保时间选择器面板有足够的空间显示确认按钮 */
+.ant-picker-time-panel {
+  padding-bottom: 50px !important;
+}
+
+/* 修复日期时间选择器的确认按钮 */
+.ant-picker-datetime-panel {
+  padding-bottom: 50px !important;
+}
+
+/* 修复数字输入框样式 */
+.ant-input-number {
+  width: 100% !important;
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 6px !important;
+}
+
+.ant-input-number:hover {
+  border-color: #40a9ff !important;
+}
+
+.ant-input-number-focused {
+  border-color: #40a9ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+}
+
+/* 修复文本域样式 */
+.ant-input {
+  border: 1px solid #d9d9d9 !important;
+  border-radius: 6px !important;
+}
+
+.ant-input:hover {
+  border-color: #40a9ff !important;
+}
+
+.ant-input:focus {
+  border-color: #40a9ff !important;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2) !important;
+}
+
+/* 确保所有表单控件在模态框中正确显示 */
+.ant-modal .ant-form-item {
+  margin-bottom: 16px !important;
+}
+
+.ant-modal .ant-form-item-label {
+  padding: 0 0 8px !important;
+}
+
+.ant-modal .ant-form-item-label > label {
+  color: #262626 !important;
+  font-weight: 500 !important;
+}
+
+/* 修复表单验证错误样式 */
+.ant-form-item-has-error .ant-select-selector,
+.ant-form-item-has-error .ant-picker,
+.ant-form-item-has-error .ant-input-number,
+.ant-form-item-has-error .ant-input {
+  border-color: #ff4d4f !important;
+}
+
+.ant-form-item-explain-error {
+  color: #ff4d4f !important;
+  font-size: 12px !important;
+  margin-top: 4px !important;
+}

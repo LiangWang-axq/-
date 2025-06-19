@@ -1,0 +1,203 @@
+/* 时间选择器确认按钮修复样式 */
+
+/* 限制时间选择器的最大高度，确保按钮可见 */
+.ant-picker-dropdown {
+  max-height: 400px !important;
+  overflow: visible !important;
+}
+
+.ant-picker-dropdown .ant-picker-panel-container {
+  max-height: 350px !important;
+  overflow: auto !important;
+}
+
+.ant-picker-dropdown .ant-picker-date-panel,
+.ant-picker-dropdown .ant-picker-time-panel {
+  max-height: 280px !important;
+  overflow: auto !important;
+}
+
+/* 强制显示时间选择器的footer */
+.ant-picker-dropdown .ant-picker-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 8px 12px !important;
+  border-top: 1px solid #f0f0f0 !important;
+  background: #fff !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: sticky !important;
+  bottom: 0 !important;
+  z-index: 9999 !important;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 强制显示确认按钮 */
+.ant-picker-dropdown .ant-picker-footer .ant-picker-ok {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  background: #1890ff !important;
+  border-color: #1890ff !important;
+  color: #fff !important;
+  padding: 4px 15px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  line-height: 1.5715 !important;
+  height: 32px !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045) !important;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1) !important;
+}
+
+.ant-picker-dropdown .ant-picker-footer .ant-picker-ok:hover {
+  background: #40a9ff !important;
+  border-color: #40a9ff !important;
+}
+
+.ant-picker-dropdown .ant-picker-footer .ant-picker-ok:active {
+  background: #096dd9 !important;
+  border-color: #096dd9 !important;
+}
+
+/* 今天按钮样式 */
+.ant-picker-dropdown .ant-picker-footer .ant-picker-today-btn {
+  color: #1890ff !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  line-height: 1.5715 !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.ant-picker-dropdown .ant-picker-footer .ant-picker-today-btn:hover {
+  color: #40a9ff !important;
+}
+
+/* 确保时间面板的footer可见 */
+.ant-picker-time-panel .ant-picker-footer {
+  display: flex !important;
+  justify-content: flex-end !important;
+  padding: 8px 12px !important;
+  border-top: 1px solid #f0f0f0 !important;
+  background: #fff !important;
+}
+
+.ant-picker-time-panel .ant-picker-footer .ant-picker-ok {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 修复日期时间选择器的footer */
+.ant-picker-datetime-panel .ant-picker-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 8px 12px !important;
+  border-top: 1px solid #f0f0f0 !important;
+  background: #fff !important;
+}
+
+.ant-picker-datetime-panel .ant-picker-footer .ant-picker-ok {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 强制显示所有时间选择器的确认按钮 */
+.ant-picker-dropdown:not(.ant-picker-dropdown-hidden) .ant-picker-footer {
+  display: flex !important;
+}
+
+.ant-picker-dropdown:not(.ant-picker-dropdown-hidden) .ant-picker-footer .ant-picker-ok {
+  display: inline-block !important;
+}
+
+/* 修复可能被隐藏的footer */
+.ant-picker-panel .ant-picker-footer {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 确保按钮文字可见 */
+.ant-picker-ok span {
+  display: inline !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 修复可能的z-index问题 */
+.ant-picker-dropdown {
+  z-index: 1050 !important;
+}
+
+.ant-picker-dropdown .ant-picker-footer {
+  z-index: 1051 !important;
+}
+
+/* 强制显示时间选择器的所有交互元素 */
+.ant-picker-dropdown .ant-picker-content {
+  position: relative !important;
+}
+
+.ant-picker-dropdown .ant-picker-content .ant-picker-footer {
+  position: relative !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+}
+
+/* 修复可能的显示问题 */
+.ant-picker-dropdown .ant-picker-panel-container {
+  overflow: visible !important;
+}
+
+.ant-picker-dropdown .ant-picker-panel {
+  position: relative !important;
+}
+
+/* 确保按钮可点击 */
+.ant-picker-dropdown .ant-picker-footer .ant-picker-ok {
+  pointer-events: auto !important;
+  user-select: none !important;
+}
+
+/* 修复移动端显示问题 */
+@media (max-width: 768px) {
+  .ant-picker-dropdown .ant-picker-footer {
+    padding: 12px !important;
+  }
+  
+  .ant-picker-dropdown .ant-picker-footer .ant-picker-ok {
+    height: 36px !important;
+    padding: 6px 18px !important;
+    font-size: 16px !important;
+  }
+}
+
+/* 修复可能的主题问题 */
+.ant-picker-dropdown.ant-picker-dropdown-placement-bottomLeft .ant-picker-footer,
+.ant-picker-dropdown.ant-picker-dropdown-placement-bottomRight .ant-picker-footer,
+.ant-picker-dropdown.ant-picker-dropdown-placement-topLeft .ant-picker-footer,
+.ant-picker-dropdown.ant-picker-dropdown-placement-topRight .ant-picker-footer {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 确保在所有状态下都显示 */
+.ant-picker-dropdown.ant-slide-up-enter .ant-picker-footer,
+.ant-picker-dropdown.ant-slide-up-enter-active .ant-picker-footer,
+.ant-picker-dropdown.ant-slide-up-appear .ant-picker-footer,
+.ant-picker-dropdown.ant-slide-up-appear-active .ant-picker-footer {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
